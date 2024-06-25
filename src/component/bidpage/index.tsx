@@ -3,31 +3,30 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import { Typography } from '@mui/material';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+
+
 
 export default function GridLearn() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, background:"#5E019A" }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-          <img src="images/hotel.jpeg" alt="Not available" />
+        <Grid item xs={12} md={6} sx={{display:"flex",justifyContent:"center"}}>
+          <img src="images/recep.png" alt="Not available" />
         </Grid>
         <Grid item xs={12} md={6}>
-          <Item>xs=4</Item>
+   
+            <Typography variant='h4'>Get your desired hotel at your price</Typography>
+            <Typography paddingTop={2}>Tired of searching for the perfect hotel that fits your budget? With BidInn, you can set your own price and find the perfect stay!</Typography>
+            <Box pt={10} >
+                <Button sx={{bgcolor:"white",color:"gray"}}>Learn More..</Button>
+                </Box>
+            
+ 
         </Grid>
-    
       </Grid>
     </Box>
   );
 }
-
-//Get your desired hotel at your price
-//Tired of searching for the perfect hotel that fits your budget? With BidInn, you can set your own price and find the perfect stay!
-
